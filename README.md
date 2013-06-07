@@ -29,4 +29,4 @@ If the colored text fails to render, it's not you.  It's your console.
 
 Works and tested with PuTTY and Cygwin.
 
-![Colors in action](/llama/php-cli_colors/sample.png)
+![Colors in action](/llamasoft/php-cli_colors/sample.png)
