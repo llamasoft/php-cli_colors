@@ -33,14 +33,19 @@ define("BAKBLU", "\033[44m"  ); // Blue   - Background
 define("BAKPUR", "\033[45m"  ); // Purple - Background
 define("BAKCYN", "\033[46m"  ); // Cyan   - Background
 define("BAKWHT", "\033[47m"  ); // White  - Background
-
 define("TXTRST", "\033[0m"   ); // Text Reset
+
+define("TTLSET", "\033]0;"   ); // Set window title
+define("TTLEND", "\007"      ); // End of title string
 
 
 function white($txt) { return BLDWHT . $txt . TXTRST; }
 function red($txt)   { return TXTRED . $txt . TXTRST; }
 function green($txt) { return TXTGRN . $txt . TXTRST; }
 function blue($txt)  { return TXTBLU . $txt . TXTRST; }
+
+function setTitle($txt) { return TTLSET . $txt . TTLEND; }
+function resizeTTY($rows, $cols) { return "\033[8;". intval($rows) .";". intval($cols) ."t"; }
 
 
 // Display routine, change this to TRUE to sample the colors.
