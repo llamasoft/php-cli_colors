@@ -39,10 +39,21 @@ define("TTLSET", "\033]0;"   ); // Set window title
 define("TTLEND", "\007"      ); // End of title string
 
 
-function white($txt) { return BLDWHT . $txt . TXTRST; }
-function red($txt)   { return TXTRED . $txt . TXTRST; }
-function green($txt) { return TXTGRN . $txt . TXTRST; }
-function blue($txt)  { return TXTBLU . $txt . TXTRST; }
+function white($txt)  { return BLDWHT . $txt . TXTRST; }
+
+function red($txt)    { return TXTRED . $txt . TXTRST; }
+function green($txt)  { return TXTGRN . $txt . TXTRST; }
+function blue($txt)   { return TXTBLU . $txt . TXTRST; }
+function purple($txt) { return TXTPUR . $txt . TXTRST; }
+function cyan($txt)   { return TXTCYN . $txt . TXTRST; }
+
+function bold_red($txt)    { return BLDRED . $txt . TXTRST; }
+function bold_green($txt)  { return BLDGRN . $txt . TXTRST; }
+function bold_blue($txt)   { return BLDBLU . $txt . TXTRST; }
+function bold_purple($txt) { return BLDPUR . $txt . TXTRST; }
+function bold_cyan($txt)   { return BLDCYN . $txt . TXTRST; }
+
+
 
 function setTitle($txt) { return TTLSET . $txt . TTLEND; }
 function resizeTTY($rows, $cols) { return "\033[8;". intval($rows) .";". intval($cols) ."t"; }
